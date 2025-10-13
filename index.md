@@ -4,43 +4,43 @@ title: LendPal - Friendly Loan Tracker
 ---
 
 <style>
-  body { 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-    line-height: 1.6; 
-    color: #333; 
-    max-width: 800px; 
-    margin: 40px auto; 
-    padding: 0 20px; 
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
     background-color: #f9f9f9;
   }
-  .app-header { 
-    text-align: center; 
-    margin-bottom: 60px; 
+  .app-header {
+    text-align: center;
+    margin-bottom: 60px;
   }
-  .app-icon { 
-    width: 120px; 
-    height: 120px; 
-    border-radius: 22.37%; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+  .app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 22.37%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     margin-bottom: 20px;
   }
-  h1 { 
-    font-size: 2.5em; 
-    margin: 0; 
+  h1 {
+    font-size: 2.5em;
+    margin: 0;
   }
-  .tagline { 
-    font-size: 1.2em; 
-    color: #666; 
+  .tagline {
+    font-size: 1.2em;
+    color: #666;
   }
-  .footer { 
-    text-align: center; 
-    margin-top: 80px; 
-    font-size: 0.9em; 
-    color: #888; 
+  .footer {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 0.9em;
+    color: #888;
   }
-  a { 
-    color: #007AFF; 
-    text-decoration: none; 
+  a {
+    color: #007AFF;
+    text-decoration: none;
   }
   a:hover {
     text-decoration: underline;
@@ -49,7 +49,7 @@ title: LendPal - Friendly Loan Tracker
 
 <div class="app-header">
   <!-- Replace 'app-icon-placeholder.png' with the URL to your actual app icon -->
-  <img src="app-icon-placeholder.png" alt="LendPal App Icon" class="app-icon">
+  <img src="app-light.png" alt="LendPal App Icon" class="app-icon">
   <h1>LendPal</h1>
   <p class="tagline">A simple, friendly way to track loans with friends and family.</p>
 </div>
