@@ -233,6 +233,61 @@ a.store-button:focus-visible {
 .feature-note p { margin: 0; font-size: 1.15rem; font-weight: 600; }
 .feature-note p::first-line { color: var(--accent); }
 
+.screenshot-showcase {
+  padding: 72px 0 48px;
+  border-top: 1px solid color-mix(in srgb, var(--page-ink) 9%, transparent);
+}
+
+.showcase-heading {
+  max-width: 650px;
+  margin-bottom: 38px;
+}
+
+.showcase-heading .eyebrow { color: var(--accent); }
+
+.showcase-heading h2 {
+  margin-bottom: 14px;
+  font-size: clamp(2.25rem, 6vw, 4.25rem);
+  letter-spacing: -.055em;
+  line-height: 1;
+}
+
+.showcase-heading > p:last-child {
+  max-width: 590px;
+  margin-bottom: 0;
+  color: var(--page-muted);
+  font-size: 1.08rem;
+}
+
+.screenshot-track {
+  display: grid;
+  grid-auto-columns: minmax(240px, 30%);
+  grid-auto-flow: column;
+  gap: 22px;
+  padding: 8px 4px 30px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scrollbar-color: color-mix(in srgb, var(--accent) 50%, transparent) transparent;
+}
+
+.screenshot-card {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--page-ink) 9%, transparent);
+  border-radius: 24px;
+  background: var(--soft);
+  box-shadow: 0 20px 48px color-mix(in srgb, var(--page-ink) 10%, transparent);
+  scroll-snap-align: start;
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .policy-shell { max-width: 720px; padding: 32px 0 80px; }
 .policy-header { padding: 96px 0 44px; border-bottom: 1px solid var(--line); }
 .policy-header h1 { margin-bottom: 12px; font-size: clamp(2.7rem, 7vw, 4.5rem); letter-spacing: -.055em; line-height: 1; }
@@ -249,6 +304,13 @@ a.store-button:focus-visible {
   .app-card { min-height: 230px; }
   .app-hero { grid-template-columns: 1fr; gap: 16px; padding: 88px 0 40px; }
   .feature-note { margin-top: 20px; }
+  .screenshot-showcase { padding-top: 56px; }
+  .screenshot-track {
+    grid-auto-columns: minmax(250px, 82%);
+    gap: 16px;
+    margin-right: -20px;
+    padding-right: 20px;
+  }
   .policy-header { padding-top: 72px; }
 }
 
