@@ -240,7 +240,7 @@ a.store-button:focus-visible {
 
 .showcase-heading {
   max-width: 650px;
-  margin-bottom: 38px;
+  margin-bottom: 20px;
 }
 
 .showcase-heading .eyebrow { color: var(--accent); }
