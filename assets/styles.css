@@ -9,6 +9,240 @@
   font-synthesis: none;
 }
 
+/* Portfolio home */
+.portfolio-home {
+  --portfolio-bg: #1c1d1f;
+  --portfolio-panel: #232426;
+  --portfolio-panel-hover: #292a2d;
+  --portfolio-ink: #f5f3ef;
+  --portfolio-muted: #a8a5a0;
+  --portfolio-accent: #d39a56;
+  background: var(--portfolio-bg);
+  color: var(--portfolio-ink);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgb(255 255 255 / 6%);
+  background: rgb(20 21 23 / 92%);
+  backdrop-filter: blur(16px);
+}
+
+.nav-inner {
+  width: min(100% - 40px, 1180px);
+  min-height: 68px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wordmark {
+  color: var(--portfolio-ink);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  text-decoration: none;
+}
+
+.wordmark span,
+.section-kicker,
+.portfolio-app-arrow { color: var(--portfolio-accent); }
+
+.site-nav nav { display: flex; gap: clamp(18px, 3vw, 38px); }
+.site-nav nav a {
+  color: #cfccc6;
+  font-size: .78rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.site-nav nav a:hover,
+.site-nav nav a:focus-visible { color: var(--portfolio-accent); }
+
+.portfolio-hero {
+  width: 100%;
+  overflow: hidden;
+  background: #151618;
+}
+
+.portfolio-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-section,
+.portfolio-footer {
+  width: min(100% - 40px, 1180px);
+  margin: 0 auto;
+}
+
+.portfolio-section {
+  padding: clamp(78px, 10vw, 128px) 0;
+}
+
+.section-heading { max-width: 590px; }
+.section-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.section-kicker::before {
+  width: 25px;
+  height: 1px;
+  content: "";
+  background: currentColor;
+}
+
+.section-heading h2,
+.portfolio-footer h2 {
+  margin-bottom: 24px;
+  font-size: clamp(2rem, 4.2vw, 3.75rem);
+  letter-spacing: -.045em;
+  line-height: 1.05;
+}
+
+.section-heading > p:last-child,
+.about-copy { color: var(--portfolio-muted); }
+
+.about-section {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: clamp(48px, 9vw, 120px);
+  align-items: start;
+}
+
+.about-copy { max-width: 650px; font-size: 1rem; }
+.about-lead {
+  color: var(--portfolio-ink);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.55;
+}
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.skill-list span {
+  padding: 13px 14px;
+  border-left: 2px solid var(--portfolio-accent);
+  background: var(--portfolio-panel);
+  color: var(--portfolio-ink);
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.apps-section {
+  width: 100%;
+  max-width: none;
+  padding-right: max(20px, calc((100% - 1180px) / 2));
+  padding-left: max(20px, calc((100% - 1180px) / 2));
+  background: #202123;
+}
+
+.portfolio-app-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 48px;
+}
+
+.portfolio-app-card {
+  position: relative;
+  min-height: 250px;
+  padding: 30px;
+  border: 1px solid rgb(255 255 255 / 5%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--portfolio-panel);
+  color: var(--portfolio-ink);
+  text-decoration: none;
+  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.portfolio-app-card:hover {
+  transform: translateY(-6px);
+  border-color: rgb(211 154 86 / 55%);
+  background: var(--portfolio-panel-hover);
+}
+
+.portfolio-app-card:focus-visible {
+  outline: 3px solid var(--portfolio-accent);
+  outline-offset: 4px;
+}
+
+.portfolio-app-icon {
+  width: 68px;
+  height: 68px;
+  overflow: hidden;
+  border-radius: 17px;
+  background: #fff;
+}
+.portfolio-app-icon img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.portfolio-app-copy { display: block; padding-top: 42px; }
+.portfolio-app-name { display: block; font-size: 1.35rem; font-weight: 750; }
+.portfolio-app-description { display: block; max-width: 380px; margin-top: 7px; color: var(--portfolio-muted); font-size: .92rem; }
+.portfolio-app-arrow { position: absolute; top: 30px; right: 30px; font-size: 1.4rem; }
+
+.portfolio-footer {
+  position: relative;
+  padding: clamp(74px, 9vw, 110px) 0 42px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+}
+
+.portfolio-footer h2 { margin: 0; }
+.contact-button {
+  min-height: 52px;
+  padding: 0 25px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--portfolio-accent);
+  color: #171717;
+  font-size: .82rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform .2s ease, filter .2s ease;
+}
+.contact-button:hover { transform: translateY(-2px); filter: brightness(1.07); }
+.copyright {
+  grid-column: 1 / -1;
+  margin: 54px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid rgb(255 255 255 / 8%);
+  color: var(--portfolio-muted);
+  font-size: .78rem;
+}
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -244,6 +478,17 @@ a.store-button:focus-visible {
 .policy-content li + li { margin-top: 10px; }
 
 @media (max-width: 700px) {
+  .nav-inner { min-height: 60px; }
+  .site-nav nav { gap: 15px; }
+  .site-nav nav a { font-size: .7rem; }
+  .portfolio-hero img { width: 100%; }
+  .about-section { grid-template-columns: 1fr; gap: 30px; }
+  .skill-list { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-app-grid { grid-template-columns: 1fr; }
+  .portfolio-app-card { min-height: 220px; }
+  .portfolio-footer { grid-template-columns: 1fr; }
+  .contact-button { justify-self: start; }
+  .copyright { margin-top: 20px; }
   .home-shell { padding-top: 9vh; }
   .app-grid { grid-template-columns: 1fr; margin: 52px 0; }
   .app-card { min-height: 230px; }
@@ -254,5 +499,5 @@ a.store-button:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .app-card, .store-button { transition: none; }
+  .app-card, .store-button, .portfolio-app-card, .contact-button { transition: none; }
 }
